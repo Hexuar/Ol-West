@@ -1,1 +1,0 @@
-give @s crossbow{display:{Name:'{"text":"Winchester Rifle","italic":false}'},CustomModelData:2220402,winchester:1b,Unbreakable:1b}

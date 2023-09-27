@@ -1,1 +1,0 @@
-give @s crossbow{display:{Name:'{"text":"Revolver","italic":false}'},CustomModelData:2220401,revolver:1b,Clip:0b,Charged:0b}
