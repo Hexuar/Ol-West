@@ -1,0 +1,3 @@
+execute as @s[nbt=!{SelectedItem:{tag:{ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{clipItem:1b}}]}}}] run give @s arrow
+execute as @s[nbt={SelectedItem:{tag:{ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{clipItem:1b}}]}}}] run function ol_west:give/clip
+item replace entity @s weapon.mainhand with crossbow{display:{Name:'{"text":"Winchester Rifle","italic":false}'},CustomModelData:288854,winchester:1b,Clip:0b,Charged:0b}

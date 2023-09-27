@@ -1,0 +1,10 @@
+tag @e[type=arrow,distance=..2] add revolverBullet
+
+item replace entity @a[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{revolver:1b,Clip:1b}}}] weapon.mainhand with crossbow{display:{Name:'{"text":"Revolver","italic":false}'},CustomModelData:159887,revolver:1b,ChargedProjectiles:[{}],Charged:0b,Clip:0b}
+item replace entity @a[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{revolver:1b,Clip:2b}}}] weapon.mainhand with crossbow{display:{Name:'{"text":"Revolver","italic":false}'},CustomModelData:159887,revolver:1b,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{clipItem:1b,display:{Name:'{"text":"Clip","italic":false}'}}}],Charged:1b,Clip:1b}
+item replace entity @a[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{revolver:1b,Clip:3b}}}] weapon.mainhand with crossbow{display:{Name:'{"text":"Revolver","italic":false}'},CustomModelData:159887,revolver:1b,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{clipItem:1b,display:{Name:'{"text":"Clip","italic":false}'}}}],Charged:1b,Clip:2b}
+item replace entity @a[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{revolver:1b,Clip:4b}}}] weapon.mainhand with crossbow{display:{Name:'{"text":"Revolver","italic":false}'},CustomModelData:159887,revolver:1b,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{clipItem:1b,display:{Name:'{"text":"Clip","italic":false}'}}}],Charged:1b,Clip:3b}
+item replace entity @a[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{revolver:1b,Clip:5b}}}] weapon.mainhand with crossbow{display:{Name:'{"text":"Revolver","italic":false}'},CustomModelData:159887,revolver:1b,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{clipItem:1b,display:{Name:'{"text":"Clip","italic":false}'}}}],Charged:1b,Clip:4b}
+item replace entity @a[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{revolver:1b,Clip:6b}}}] weapon.mainhand with crossbow{display:{Name:'{"text":"Revolver","italic":false}'},CustomModelData:159887,revolver:1b,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{clipItem:1b,display:{Name:'{"text":"Clip","italic":false}'}}}],Charged:1b,Clip:5b}
+
+scoreboard players set @s[scores={shootCrossbow=1..}] shootCrossbow 0
