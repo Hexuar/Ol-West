@@ -1,0 +1,6 @@
+[
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{ChargedProjectiles:[{id:\"minecraft:arrow\",Count:1b,tag:{ctc:{id:'clip', from:'hexuar:ol_west'}}}],Charged:1b,ol_west:{Clip:3b}}"
+  }
+]

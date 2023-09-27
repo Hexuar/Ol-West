@@ -1,31 +1,33 @@
-####################################################
-##### Ol' West ##### Loop ##### By Hellogaming #####
-####################################################
+###############################
+##### Ol' West ##### Loop #####
+###############################
 
 ##### Revolver
 
 ## Load
 
-execute as @a[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{revolver:1b,Charged:1b}}},nbt=!{SelectedItem:{tag:{ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{clipItem:1b,display:{Name:'{"text":"Clip","italic":false}'}}}]}}}] run function ol_west:items/revolver_kick_arrow
-execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:crossbow",tag:{revolver:1b,Charged:1b}}]},nbt=!{Inventory:[{Slot:-106b,tag:{ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{clipItem:1b,display:{Name:'{"text":"Clip","italic":false}'}}}]}}]}] run function ol_west:items/revolver_kick_arrow_offhand
+execute as @a[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{ctc:{id:'revolver', from:'hexuar:ol_west'},Charged:1b}}},nbt=!{SelectedItem:{tag:{ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{ctc:{id:'clip', from:'hexuar:ol_west'}}}]}}}] run function ol_west:items/revolver_kick_arrow
+
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:crossbow",tag:{ctc:{id:'revolver', from:'hexuar:ol_west'},Charged:1b}}]},nbt=!{Inventory:[{Slot:-106b,tag:{ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{ctc:{id:'clip', from:'hexuar:ol_west'}}}]}}]}] run function ol_west:items/revolver_kick_arrow_offhand
 
 ## //Load
 ## Reload
 
-item replace entity @a[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{revolver:1b,Charged:1b,Clip:0b,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{clipItem:1b,display:{Name:'{"text":"Clip","italic":false}'}}}]}}}] weapon.mainhand with crossbow{display:{Name:'{"text":"Revolver","italic":false}'},CustomModelData:159887,revolver:1b,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{clipItem:1b,display:{Name:'{"text":"Clip","italic":false}'}}}],Charged:1b,Clip:6b,recharged:1b}
-item replace entity @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:crossbow",tag:{revolver:1b,Charged:1b,Clip:0b,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{clipItem:1b,display:{Name:'{"text":"Clip","italic":false}'}}}]}}]}] weapon.offhand with crossbow{display:{Name:'{"text":"Revolver","italic":false}'},CustomModelData:159887,revolver:1b,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{clipItem:1b,display:{Name:'{"text":"Clip","italic":false}'}}}],Charged:1b,Clip:6b,recharged:1b}
+item modify entity @a[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{ctc:{id:'revolver', from:'hexuar:ol_west'},ol_west:{Clip:0b},Charged:1b,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{ctc:{id:'clip', from:'hexuar:ol_west'}}}]}}}] weapon.mainhand ol_west:revolver_6
+
+item modify entity @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:crossbow",tag:{ctc:{id:'revolver', from:'hexuar:ol_west'},ol_west:{Clip:0b},Charged:1b,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{ctc:{id:'clip', from:'hexuar:ol_west'}}}]}}]}] weapon.offhand ol_west:revolver_6
 
 ## //Reload
 ## Shoot
 
-tag @a[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{revolver:1b}}}] add holdingRevolver
-tag @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:crossbow",tag:{revolver:1b}}]}] add holdingRevolverO
+tag @a[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{ctc:{id:'revolver', from:'hexuar:ol_west'}}}}] add ol_west.shootCrossbowholdingRevolver
+tag @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:crossbow",tag:{ctc:{id:'revolver', from:'hexuar:ol_west'}}}]}] add ol_west.shootCrossbowholdingRevolverO
 
-execute as @a[tag=holdingRevolver,scores={shootCrossbow=1..}] at @s positioned ~ ~1 ~ run function ol_west:items/revolver_shoot
-execute as @a[tag=holdingRevolverO,scores={shootCrossbow=1..}] at @s positioned ~ ~1 ~ run function ol_west:items/revolver_shoot_offhand
+execute as @a[tag=ol_west.shootCrossbowholdingRevolver,scores={ol_west.shootCrossbow=1..}] at @s positioned ~ ~1 ~ run function ol_west:items/revolver_shoot
+execute as @a[tag=ol_west.shootCrossbowholdingRevolverO,scores={ol_west.shootCrossbow=1..}] at @s positioned ~ ~1 ~ run function ol_west:items/revolver_shoot_offhand
 
-tag @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:crossbow",tag:{revolver:1b}}]}] remove holdingRevolverO
-tag @a[nbt=!{SelectedItem:{id:"minecraft:crossbow",tag:{revolver:1b}}}] remove holdingRevolver
+tag @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:crossbow",tag:{ctc:{id:'revolver', from:'hexuar:ol_west'}}}]}] remove ol_west.shootCrossbowholdingRevolverO
+tag @a[nbt=!{SelectedItem:{id:"minecraft:crossbow",tag:{ctc:{id:'revolver', from:'hexuar:ol_west'}}}}] remove ol_west.shootCrossbowholdingRevolver
 
 
 ## //Shoot
@@ -51,20 +53,20 @@ kill @e[type=arrow,tag=revolverBullet,nbt={inGround:1b}]
 
 ## Load
 
-execute as @a[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{winchester:1b,Charged:1b}}},nbt=!{SelectedItem:{tag:{ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{bullet:1b,display:{Name:'{"text":"Bullet","italic":false}'}}}]}}}] run function ol_west:items/winchester/kick_arrow
-execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:crossbow",tag:{winchester:1b,Charged:1b}}]},nbt=!{Inventory:[{Slot:-106b,tag:{ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{bullet:1b,display:{Name:'{"text":"Bullet","italic":false}'}}}]}}]}] run function ol_west:items/winchester/kick_arrow_offhand
+execute as @a[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{ctc:{id:'winchester', from:'hexuar:ol_west'},Charged:1b}}},nbt=!{SelectedItem:{tag:{ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{ctc:{id:'bullet', from:'hexuar:ol_west'}}}]}}}] run function ol_west:items/winchester/kick_arrow
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:crossbow",tag:{ctc:{id:'winchester', from:'hexuar:ol_west'},Charged:1b}}]},nbt=!{Inventory:[{Slot:-106b,tag:{ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{ctc:{id:'bullet', from:'hexuar:ol_west'}}}]}}]}] run function ol_west:items/winchester/kick_arrow_offhand
 
 ## //Load
 ## Shoot
 
-tag @a[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{winchester:1b}}}] add holdingWinchester
-tag @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:crossbow",tag:{winchester:1b}}]}] add holdingWinchesterO
+tag @a[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{ctc:{id:'winchester', from:'hexuar:ol_west'}}}}] add holdingWinchester
+tag @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:crossbow",tag:{ctc:{id:'winchester', from:'hexuar:ol_west'}}}]}] add holdingWinchesterO
 
-execute as @a[tag=holdingWinchester,scores={shootCrossbow=1..}] at @s positioned ~ ~1 ~ run function ol_west:items/winchester/shoot
-execute as @a[tag=holdingWinchesterO,scores={shootCrossbow=1..}] at @s positioned ~ ~1 ~ run function ol_west:items/winchester/shoot_offhand
+execute as @a[tag=holdingWinchester,scores={ol_west.shootCrossbow=1..}] at @s positioned ~ ~1 ~ run function ol_west:items/winchester/shoot
+execute as @a[tag=holdingWinchesterO,scores={ol_west.shootCrossbow=1..}] at @s positioned ~ ~1 ~ run function ol_west:items/winchester/shoot_offhand
 
-tag @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:crossbow",tag:{winchester:1b}}]}] remove holdingWinchesterO
-tag @a[nbt=!{SelectedItem:{id:"minecraft:crossbow",tag:{winchester:1b}}}] remove holdingWinchester
+tag @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:crossbow",tag:{ctc:{id:'winchester', from:'hexuar:ol_west'}}}]}] remove holdingWinchesterO
+tag @a[nbt=!{SelectedItem:{id:"minecraft:crossbow",tag:{ctc:{id:'winchester', from:'hexuar:ol_west'}}}}] remove holdingWinchester
 
 
 ## //Shoot

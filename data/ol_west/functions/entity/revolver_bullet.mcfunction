@@ -1,5 +1,5 @@
 
 playsound entity.dragon_fireball.explode player @a ~ ~ ~
-data modify entity @s damage set value 7d
+execute store result entity @s damage double 0.01 run scoreboard players get #revolver ol_west.bulletDamage
 
 tag @s add hasTags

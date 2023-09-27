@@ -1,0 +1,42 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:crossbow",
+            "functions": [
+              {
+                "function": "minecraft:set_nbt",
+                "tag": "{CustomModelData: 2220401, ol_west:{Clip:0b}}"
+              },
+              {
+                "function": "minecraft:set_nbt",
+                "tag": "{ctc: {id: 'revolver', from: 'hexuar:ol_west', traits: {'tool/weapon': 1b}}}"
+              },
+              {
+                "function": "minecraft:set_name",
+                "name": {
+                  "translate": "item.ol_west.revolver",
+                  "color": "white",
+                  "italic": false
+                }
+              },
+              {
+                "function": "minecraft:set_lore",
+                "lore": [
+                  {
+                    "translate": "pack.ol_west",
+                    "color": "blue",
+                    "italic": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

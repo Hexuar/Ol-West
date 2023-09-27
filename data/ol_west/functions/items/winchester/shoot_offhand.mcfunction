@@ -1,3 +1,3 @@
 tag @e[type=arrow,distance=..2] add winchesterBullet
 
-scoreboard players set @s[scores={shootCrossbow=1..}] shootCrossbow 0
+scoreboard players set @s[scores={ol_west.shootCrossbow=1..}] ol_west.shootCrossbow 0

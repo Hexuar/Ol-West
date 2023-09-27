@@ -1,0 +1,42 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:arrow",
+            "functions": [
+              {
+                "function": "minecraft:set_nbt",
+                "tag": "{CustomModelData: 2220402}"
+              },
+              {
+                "function": "minecraft:set_nbt",
+                "tag": "{ctc: {id: 'bullet', from: 'hexuar:ol_west', traits: {'item': 1b}}}"
+              },
+              {
+                "function": "minecraft:set_name",
+                "name": {
+                  "translate": "item.ol_west.bullet",
+                  "color": "white",
+                  "italic": false
+                }
+              },
+              {
+                "function": "minecraft:set_lore",
+                "lore": [
+                  {
+                    "translate": "pack.ol_west",
+                    "color": "blue",
+                    "italic": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

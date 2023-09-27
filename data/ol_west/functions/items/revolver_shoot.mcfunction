@@ -1,10 +1,10 @@
 tag @e[type=arrow,distance=..2] add revolverBullet
 
-item replace entity @a[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{revolver:1b,Clip:1b}}}] weapon.mainhand with crossbow{display:{Name:'{"text":"Revolver","italic":false}'},CustomModelData:159887,revolver:1b,ChargedProjectiles:[{}],Charged:0b,Clip:0b}
-item replace entity @a[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{revolver:1b,Clip:2b}}}] weapon.mainhand with crossbow{display:{Name:'{"text":"Revolver","italic":false}'},CustomModelData:159887,revolver:1b,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{clipItem:1b,display:{Name:'{"text":"Clip","italic":false}'}}}],Charged:1b,Clip:1b}
-item replace entity @a[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{revolver:1b,Clip:3b}}}] weapon.mainhand with crossbow{display:{Name:'{"text":"Revolver","italic":false}'},CustomModelData:159887,revolver:1b,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{clipItem:1b,display:{Name:'{"text":"Clip","italic":false}'}}}],Charged:1b,Clip:2b}
-item replace entity @a[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{revolver:1b,Clip:4b}}}] weapon.mainhand with crossbow{display:{Name:'{"text":"Revolver","italic":false}'},CustomModelData:159887,revolver:1b,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{clipItem:1b,display:{Name:'{"text":"Clip","italic":false}'}}}],Charged:1b,Clip:3b}
-item replace entity @a[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{revolver:1b,Clip:5b}}}] weapon.mainhand with crossbow{display:{Name:'{"text":"Revolver","italic":false}'},CustomModelData:159887,revolver:1b,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{clipItem:1b,display:{Name:'{"text":"Clip","italic":false}'}}}],Charged:1b,Clip:4b}
-item replace entity @a[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{revolver:1b,Clip:6b}}}] weapon.mainhand with crossbow{display:{Name:'{"text":"Revolver","italic":false}'},CustomModelData:159887,revolver:1b,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{clipItem:1b,display:{Name:'{"text":"Clip","italic":false}'}}}],Charged:1b,Clip:5b}
+item modify entity @s[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{ctc:{id:'revolver', from:'hexuar:ol_west'},ol_west:{Clip:1b}}}}] weapon.mainhand ol_west:revolver_0
+item modify entity @s[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{ctc:{id:'revolver', from:'hexuar:ol_west'},ol_west:{Clip:2b}}}}] weapon.mainhand ol_west:revolver_1
+item modify entity @s[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{ctc:{id:'revolver', from:'hexuar:ol_west'},ol_west:{Clip:3b}}}}] weapon.mainhand ol_west:revolver_2
+item modify entity @s[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{ctc:{id:'revolver', from:'hexuar:ol_west'},ol_west:{Clip:4b}}}}] weapon.mainhand ol_west:revolver_3
+item modify entity @s[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{ctc:{id:'revolver', from:'hexuar:ol_west'},ol_west:{Clip:5b}}}}] weapon.mainhand ol_west:revolver_4
+item modify entity @s[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{ctc:{id:'revolver', from:'hexuar:ol_west'},ol_west:{Clip:6b}}}}] weapon.mainhand ol_west:revolver_5
 
-scoreboard players set @s[scores={shootCrossbow=1..}] shootCrossbow 0
+scoreboard players set @s[scores={ol_west.shootCrossbow=1..}] ol_west.shootCrossbow 0
