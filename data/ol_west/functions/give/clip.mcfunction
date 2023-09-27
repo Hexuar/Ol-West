@@ -1,0 +1,1 @@
+give @s minecraft:arrow{CustomModelData:2220401,clipItem:1b,display:{Name:'{"text":"Clip","italic":false}'}} 1
