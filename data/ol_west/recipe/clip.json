@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "212",
+      "121",
+      "212"
+    ],
+    "key": {
+      "1": "minecraft:iron_nugget",
+      "2": "minecraft:gunpowder"
+    },
+    "result": {
+      "id": "minecraft:arrow",
+      "components": {
+        "minecraft:item_name": "{\"translate\":\"item.ol_west.clip\"}",
+        "minecraft:item_model": "ol_west:clip",
+        "minecraft:custom_data": {
+          "ol_west": {
+              "clip": true
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,1 @@
+execute as @n[type=minecraft:arrow] run function ol_west:entity/winchester_bullet

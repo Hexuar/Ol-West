@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:iron_nugget",
+    "minecraft:gunpowder"
+  ],
+  "result": {
+    "id": "minecraft:arrow",
+    "components": {
+      "minecraft:item_name": "{\"translate\":\"item.ol_west.bullet\"}",
+      "minecraft:item_model": "ol_west:bullet",
+      "minecraft:custom_data": {
+        "ol_west": {
+          "bullet": true
+        }
+      }
+    }
+  }
+}

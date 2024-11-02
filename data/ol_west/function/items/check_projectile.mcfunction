@@ -1,0 +1,10 @@
+# Winchester
+execute as @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{ol_west:{winchester:true}}}}},nbt=!{SelectedItem:{components:{"minecraft:charged_projectiles":[{components:{"minecraft:custom_data":{ol_west:{bullet:true}}}}]}}},nbt=!{SelectedItem:{components:{"minecraft:charged_projectiles":[{components:{"minecraft:custom_data":{ol_west:{projectile:true}}}}]}}}] unless items entity @s weapon.mainhand *[minecraft:charged_projectiles=[]] at @s run function ol_west:items/kick_arrow/mainhand
+
+execute as @a[nbt={Inventory:[{Slot:-106b,components:{"minecraft:custom_data":{ol_west:{winchester:true}}}}]},nbt=!{Inventory:[{Slot:-106b,components:{"minecraft:charged_projectiles":[{components:{"minecraft:custom_data":{ol_west:{bullet:true}}}}]}}]},nbt=!{Inventory:[{Slot:-106b,components:{"minecraft:charged_projectiles":[{components:{"minecraft:custom_data":{ol_west:{projectile:true}}}}]}}]}] unless items entity @s weapon.offhand *[minecraft:charged_projectiles=[]] at @s run function ol_west:items/kick_arrow/offhand
+
+
+# Revolver
+execute as @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{ol_west:{revolver:true}}}}},nbt=!{SelectedItem:{components:{"minecraft:charged_projectiles":[{components:{"minecraft:custom_data":{ol_west:{clip:true}}}}]}}},nbt=!{SelectedItem:{components:{"minecraft:charged_projectiles":[{components:{"minecraft:custom_data":{ol_west:{projectile:true}}}}]}}}] unless items entity @s weapon.mainhand *[minecraft:charged_projectiles=[]] at @s run function ol_west:items/kick_arrow/mainhand
+
+execute as @a[nbt={Inventory:[{Slot:-106b,components:{"minecraft:custom_data":{ol_west:{revolver:true}}}}]},nbt=!{Inventory:[{Slot:-106b,components:{"minecraft:charged_projectiles":[{components:{"minecraft:custom_data":{ol_west:{clip:true}}}}]}}]},nbt=!{Inventory:[{Slot:-106b,components:{"minecraft:charged_projectiles":[{components:{"minecraft:custom_data":{ol_west:{projectile:true}}}}]}}]}] unless items entity @s weapon.offhand *[minecraft:charged_projectiles=[]] at @s run function ol_west:items/kick_arrow/offhand

@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "  3",
+      " 11",
+      "  2"
+    ],
+    "key": {
+      "1": "minecraft:iron_ingot",
+      "2": "minecraft:stripped_spruce_wood",
+      "3": "minecraft:netherite_scrap"
+    },
+    "result": {
+      "id": "minecraft:crossbow",
+      "components": {
+        "minecraft:item_name": "{\"translate\":\"item.ol_west.revolver\"}",
+        "minecraft:item_model": "ol_west:revolver",
+        "minecraft:custom_data": {
+          "ol_west": {
+              "revolver": true
+          }
+        }
+      }
+    }
+  }
+  

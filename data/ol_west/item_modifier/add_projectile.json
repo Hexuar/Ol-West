@@ -1,0 +1,19 @@
+[
+    {
+      "function": "minecraft:set_components",
+      "components": {
+        "minecraft:charged_projectiles": [
+          {
+            "id": "minecraft:arrow",
+            "components": {
+              "minecraft:custom_data": {
+                "ol_west": {
+                  "projectile":true
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]

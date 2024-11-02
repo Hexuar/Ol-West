@@ -1,3 +1,0 @@
-execute as @s[nbt={Inventory:[{Slot:-106b,tag:{ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{ctc:{id:'clip', from:'hexuar:ol_west'}}}]}}]}] run loot give @s loot ol_west:items/clip
-execute as @s[nbt=!{Inventory:[{Slot:-106b,tag:{ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{ctc:{id:'clip', from:'hexuar:ol_west'}}}]}}]}] run give @s arrow
-item modify entity @s weapon.offhand ol_west:revolver_0

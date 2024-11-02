@@ -1,7 +1,0 @@
-[
-    {
-      "function": "minecraft:set_nbt",
-      "tag": "{ChargedProjectiles:[{}],Charged:0b,ol_west:{Clip:0b}}"
-    }
-  ]
-  
